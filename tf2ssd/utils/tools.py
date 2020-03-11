@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-from configuration import CHANNELS, IMAGE_HEIGHT, IMAGE_WIDTH
+from tf2ssd.configuration import CHANNELS, IMAGE_HEIGHT, IMAGE_WIDTH
 
 
 def x_y_meshgrid(x_row, y_col):

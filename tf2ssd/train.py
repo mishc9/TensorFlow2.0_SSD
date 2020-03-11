@@ -1,14 +1,14 @@
 import tensorflow as tf
 import time
 
-from configuration import IMAGE_HEIGHT, IMAGE_WIDTH, CHANNELS, EPOCHS, NUM_CLASSES, BATCH_SIZE, save_model_dir, \
+from tf2ssd.configuration import IMAGE_HEIGHT, IMAGE_WIDTH, CHANNELS, EPOCHS, NUM_CLASSES, BATCH_SIZE, save_model_dir, \
     load_weights_before_training, load_weights_from_epoch, save_frequency, test_images_during_training, \
     test_images_dir_list
-from core.ground_truth import ReadDataset, MakeGT
-from core.loss import SSDLoss
-from core.make_dataset import TFDataset
-from core.ssd import SSD, ssd_prediction
-from utils.visualize import visualize_training_results
+from tf2ssd.core import ReadDataset, MakeGT
+from tf2ssd.core.loss import SSDLoss
+from tf2ssd.core import TFDataset
+from tf2ssd.core import SSD, ssd_prediction
+from tf2ssd.utils import visualize_training_results
 
 
 def print_model_summary(network):

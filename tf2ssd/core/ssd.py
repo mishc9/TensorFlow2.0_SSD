@@ -1,6 +1,6 @@
 import tensorflow as tf
-from core.models.resnet import ResNet50
-from configuration import NUM_CLASSES, ASPECT_RATIOS
+from tf2ssd.core.models.resnet import ResNet50
+from tf2ssd.configuration import NUM_CLASSES, ASPECT_RATIOS
 
 
 class SSD(tf.keras.Model):

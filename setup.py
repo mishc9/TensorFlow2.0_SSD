@@ -11,6 +11,7 @@ except FileNotFoundError:
 setup(
     name='tf2ssd',
     version='0.0.0',
+    license='MIT',
     author='https://github.com/calmisential',
     packages=setuptools.find_packages(),
     description='ssd implementation in TF2.0',

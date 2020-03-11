@@ -1,6 +1,6 @@
 import cv2
-from test import test_single_picture
-from configuration import training_results_save_dir
+from tf2ssd.test import test_single_picture
+from tf2ssd.configuration import training_results_save_dir
 
 
 def visualize_training_results(pictures, model, epoch):

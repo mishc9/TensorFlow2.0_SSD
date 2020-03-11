@@ -1,5 +1,5 @@
-from core.parse_voc import ParsePascalVOC
-from configuration import TXT_DIR
+from tf2ssd.core.parse_voc import ParsePascalVOC
+from tf2ssd.configuration import TXT_DIR
 
 
 if __name__ == '__main__':
