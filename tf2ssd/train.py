@@ -9,7 +9,7 @@ from tf2ssd.core import ReadDataset, MakeGT
 from tf2ssd.core import SSD, ssd_prediction
 from tf2ssd.core import SSDLoss
 from tf2ssd.core import TFDataset
-from tf2ssd.utils import visualize_training_results
+from tf2ssd.core.inference import visualize_training_results
 
 
 def print_model_summary(network):

@@ -3,7 +3,7 @@ import cv2
 
 from tf2ssd.configuration import save_model_dir, test_picture_dir
 from tf2ssd.core import SSD
-from tf2ssd.core.inference import test_single_picture
+from tf2ssd.core import test_single_picture
 
 # shape of boxes : (N, 4)  (xmin, ymin, xmax, ymax)
 # shape of scores : (N,)

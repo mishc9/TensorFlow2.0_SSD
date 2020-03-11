@@ -1,7 +1,7 @@
 import cv2
 import tensorflow as tf
 import numpy as np
-from tf2ssd.configuration import NUM_CLASSES, IMAGE_HEIGHT, IMAGE_WIDTH, OBJECT_CLASSES
+from tf2ssd.configuration import NUM_CLASSES, IMAGE_HEIGHT, IMAGE_WIDTH, OBJECT_CLASSES, training_results_save_dir
 from tf2ssd.core.anchor import DefaultBoxes
 from tf2ssd.core.ssd import ssd_prediction
 from tf2ssd.utils.nms import NMS
@@ -110,3 +110,12 @@ def test_single_picture(picture_dir, model):
         print("No objects were detected.")
         image_with_boxes = cv2.imread(picture_dir)
     return image_with_boxes
+
+
+def visualize_training_results(pictures, model, epoch):
+    # pictures : List of image directories.
+    index = 0
+    for picture in pictures:
+        index += 1
+        result = test_single_picture(picture_dir=picture, model=model)
+        cv2.imwrite(filename=training_results_save_dir + "epoch-{}-picture-{}.jpg".format(epoch, index), img=result)
