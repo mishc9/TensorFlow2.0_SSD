@@ -1,7 +1,7 @@
 import numpy as np
 import math
-from configuration import IMAGE_WIDTH, IMAGE_HEIGHT, ASPECT_RATIOS
-from utils.tools import x_y_meshgrid
+from tf2ssd.configuration import IMAGE_WIDTH, IMAGE_HEIGHT, ASPECT_RATIOS
+from tf2ssd.utils.tools import x_y_meshgrid
 
 
 class FeatureMap(object):

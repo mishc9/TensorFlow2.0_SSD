@@ -1,10 +1,10 @@
 import tensorflow as tf
 import numpy as np
 
-from utils.IoU import IOU
-from utils.tools import str_to_int, resize_box, preprocess_image
-from configuration import MAX_BOXES_PER_IMAGE, IMAGE_WIDTH, IMAGE_HEIGHT, IOU_THRESHOLD
-from core.anchor import DefaultBoxes
+from tf2ssd.utils.IoU import IOU
+from tf2ssd.utils.tools import str_to_int, resize_box, preprocess_image
+from tf2ssd.configuration import MAX_BOXES_PER_IMAGE, IMAGE_WIDTH, IMAGE_HEIGHT, IOU_THRESHOLD
+from tf2ssd.core import DefaultBoxes
 
 
 class ReadDataset(object):

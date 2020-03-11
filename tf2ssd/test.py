@@ -1,10 +1,10 @@
 import tensorflow as tf
 import cv2
 
-from configuration import OBJECT_CLASSES, save_model_dir, test_picture_dir
-from core.inference import InferenceProcedure
-from core.ssd import SSD
-from utils.tools import preprocess_image
+from tf2ssd.configuration import OBJECT_CLASSES, save_model_dir, test_picture_dir
+from tf2ssd.core import InferenceProcedure
+from tf2ssd.core import SSD
+from tf2ssd.utils.tools import preprocess_image
 
 
 def find_class_name(class_id):

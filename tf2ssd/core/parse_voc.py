@@ -1,8 +1,8 @@
 import xml.dom.minidom as xdom
-from configuration import PASCAL_VOC_DIR, OBJECT_CLASSES
+from tf2ssd.configuration import PASCAL_VOC_DIR, OBJECT_CLASSES
 import os
 
-from utils.tools import str_to_int
+from tf2ssd.utils.tools import str_to_int
 
 
 class ParsePascalVOC(object):

@@ -1,5 +1,5 @@
 import tensorflow as tf
-from configuration import NMS_IOU_THRESHOLD, CONFIDENCE_THRESHOLD, MAX_BOX_NUM, NUM_CLASSES
+from tf2ssd.configuration import NMS_IOU_THRESHOLD, CONFIDENCE_THRESHOLD, MAX_BOX_NUM, NUM_CLASSES
 
 
 class NMS(object):

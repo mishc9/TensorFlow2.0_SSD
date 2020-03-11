@@ -13,7 +13,7 @@ save_frequency = 5
 test_picture_dir = ""
 
 test_images_during_training = False
-training_results_save_dir = "./test_pictures/"
+training_results_save_dir = "../test_pictures/"
 test_images_dir_list = ["", ""]
 
 # When the iou value of the anchor and the real box is less than the IoU_threshold,
@@ -55,5 +55,5 @@ MAX_BOX_NUM = 50
 
 
 # directory of saving model
-save_model_dir = "saved_model/"
+save_model_dir = "../saved_model/"
 

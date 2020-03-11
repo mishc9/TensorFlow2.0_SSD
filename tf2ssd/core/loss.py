@@ -1,7 +1,7 @@
 import tensorflow as tf
 
-from configuration import reg_loss_weight, NUM_CLASSES, alpha, gamma
-from utils.focal_loss import sigmoid_focal_loss
+from tf2ssd.configuration import reg_loss_weight, NUM_CLASSES, alpha, gamma
+from tf2ssd.utils.focal_loss import sigmoid_focal_loss
 
 
 class SmoothL1Loss(object):
