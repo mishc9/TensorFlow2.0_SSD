@@ -1,2 +1,1 @@
-from tf2ssd.utils.visualize import visualize_training_results
-
+from .visualize import visualize_training_results
