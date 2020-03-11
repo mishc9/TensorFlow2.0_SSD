@@ -1,13 +1,14 @@
-import tensorflow as tf
 import time
+
+import tensorflow as tf
 
 from tf2ssd.configuration import IMAGE_HEIGHT, IMAGE_WIDTH, CHANNELS, EPOCHS, NUM_CLASSES, BATCH_SIZE, save_model_dir, \
     load_weights_before_training, load_weights_from_epoch, save_frequency, test_images_during_training, \
     test_images_dir_list
 from tf2ssd.core import ReadDataset, MakeGT
-from tf2ssd.core.loss import SSDLoss
-from tf2ssd.core import TFDataset
 from tf2ssd.core import SSD, ssd_prediction
+from tf2ssd.core import SSDLoss
+from tf2ssd.core import TFDataset
 from tf2ssd.utils import visualize_training_results
 
 
@@ -30,7 +31,7 @@ if __name__ == '__main__':
     print_model_summary(network=ssd)
 
     if load_weights_before_training:
-        ssd.load_weights(filepath=save_model_dir+"epoch-{}".format(load_weights_from_epoch))
+        ssd.load_weights(filepath=save_model_dir + "epoch-{}".format(load_weights_from_epoch))
         print("Successfully load weights!")
     else:
         load_weights_from_epoch = -1
@@ -45,6 +46,7 @@ if __name__ == '__main__':
     loss_metric = tf.metrics.Mean()
     cls_loss_metric = tf.metrics.Mean()
     reg_loss_metric = tf.metrics.Mean()
+
 
     def train_step(batch_images, batch_labels):
         with tf.GradientTape() as tape:
@@ -80,9 +82,9 @@ if __name__ == '__main__':
         reg_loss_metric.reset_states()
 
         if epoch % save_frequency == 0:
-            ssd.save_weights(filepath=save_model_dir+"epoch-{}".format(epoch), save_format="tf")
+            ssd.save_weights(filepath=save_model_dir + "epoch-{}".format(epoch), save_format="tf")
 
         if test_images_during_training:
             visualize_training_results(pictures=test_images_dir_list, model=ssd, epoch=epoch)
 
-    ssd.save_weights(filepath=save_model_dir+"saved_model", save_format="tf")
+    ssd.save_weights(filepath=save_model_dir + "saved_model", save_format="tf")

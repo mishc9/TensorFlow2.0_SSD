@@ -1,8 +1,8 @@
 import tensorflow as tf
 import numpy as np
 from tf2ssd.configuration import NUM_CLASSES, IMAGE_HEIGHT, IMAGE_WIDTH
-from tf2ssd.core import DefaultBoxes
-from tf2ssd.core import ssd_prediction
+from tf2ssd.core.anchor import DefaultBoxes
+from tf2ssd.core.ssd import ssd_prediction
 from tf2ssd.utils.nms import NMS
 
 
